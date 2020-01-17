@@ -1,0 +1,9 @@
+.#*
+\#*
+.env
+ip.nix
+result
+nixos/hardware-configuration.nix
+nixos/networking.nix
+nixos/allowed_keys/**
+!nixos/allowed_keys/.gitkeep
