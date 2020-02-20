@@ -3,6 +3,8 @@
 ## Initialize repozitory
 - clone repo
 - create Ubuntu 16. x64 LTS droplet
+- add your keys you want to access with into `allowed_keys/`
+- uncomment keys and import them in `nixos/configuration.nix`
 - copy IPv4
 - copy example.ip.nix and modify
    ```bash
