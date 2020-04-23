@@ -6,7 +6,7 @@ IP=$(grep -iPo '(?<=ip = ")(.*)(?=";)' ./ip.nix)
 USER="nixbuilder"
 
 if [[ -n $IP ]]; then
-    ssh root@$IP -oStrictHostKeyChecking=accept-new chown -R nixbuilder /home/nixbuilder/nixos
+    ssh root@$IP -oStrictHostKeyChecking=accept-new chown -hR nixbuilder /home/nixbuilder/nixos
     scp $USER@$IP:nixos/hardware-configuration.nix ./nixos/hardware-configuration.nix
     scp $USER@$IP:nixos/networking.nix ./nixos/networking.nix
 else
